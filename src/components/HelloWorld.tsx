@@ -8,12 +8,12 @@ interface HelloState {
   wasDisplayed : boolean
 }
 
-class HelloWorldComponent extends React.Component<HelloProps, HelloState> {
+class HelloWorld extends React.Component<HelloProps, HelloState> {
    public render() {
      return(
-        <h1>This is a test....</h1>
+        <h1>This is a test....[{this.props.greeting}] </h1>
      );   
    }
 }
 
-export default HelloWorldComponent;
+export default HelloWorld;
