@@ -9,5 +9,11 @@ interface HelloState {
 }
 
 class HelloWorldComponent extends React.Component<HelloProps, HelloState> {
-   /* empty */
+   public render() {
+     return(
+        <h1>This is a test....</h1>
+     );   
+   }
 }
+
+export default HelloWorldComponent;
