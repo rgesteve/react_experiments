@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import HelloWorld from './components/HelloWorld';
+import Smiley from './components/Smiley';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         >
           react
         </a>
+        <Smiley height={300} width={300} />
 	</code>
 	experiments.
 	</p>

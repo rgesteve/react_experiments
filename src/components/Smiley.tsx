@@ -1,8 +1,14 @@
 import React from 'react';
+//import Math;
 
-/*
-class Smiley extends React.Component {
-  constructor(props) {
+interface SmileyProps {
+  height : number;
+  width  : number;
+}
+
+class Smiley extends React.Component<SmileyProps, {}> {
+
+  constructor(props:SmileyProps) {
     super(props);
 
     this.state = {
@@ -12,6 +18,12 @@ class Smiley extends React.Component {
   }
 
   render() {
+    let radius = Math.min(this.props.width, this.props.height) / 2;
+    return (
+      <h1>I should be drawing a circle of radius {radius}.</h1>
+    )
   }
+
 }
-*/
+
+export default Smiley;
