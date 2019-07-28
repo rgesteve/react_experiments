@@ -1,7 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropDrillingBadMenuItem from './PropDrillingBadMenuItem';
+import PropDrillingBadMenuA from './PropDrillingBadMenuA';
 
-class PropDrillingBadMenu extends PureComponent<any, {item : string}> {
+interface PropDrillingBadMenuProps {
+  bgColor : string,
+  fgColor : string
+}
+
+class PropDrillingBadMenu extends PureComponent<PropDrillingBadMenuProps, {item : string}> {
 
   state = {
     item : 'A',
@@ -13,6 +19,7 @@ class PropDrillingBadMenu extends PureComponent<any, {item : string}> {
   };
 
   render() {
+    const { bgColor, fgColor } = this.props;
     const { item } = this.state;
     return (
       <div>
@@ -22,6 +29,12 @@ class PropDrillingBadMenu extends PureComponent<any, {item : string}> {
   	  <PropDrillingBadMenuItem item="B" onClick={this.setItem} />
   	  <PropDrillingBadMenuItem item="C" onClick={this.setItem} />
 	</div>
+	{item === 'A' && (
+	  <PropDrillingBadMenuA
+	    bgColor={bgColor}
+    	    fgColor={fgColor}
+	  />
+	)}
       </div>
     );
   }
