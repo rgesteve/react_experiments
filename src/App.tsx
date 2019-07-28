@@ -13,6 +13,7 @@ const App: React.FC = () => {
       <header className="App-header">
         <HelloWorld greeting="Joe" />
         <img src={logo} className="App-logo" alt="logo" />
+	<TopComponent />
         <p>
 	Various <code>
         <a

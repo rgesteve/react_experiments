@@ -5,6 +5,11 @@ interface TopComponentState {
 }
 
 export class TopComponent extends React.Component<{}, TopComponentState> {
+
+  state = {
+    searchTerm : ''
+  }
+
   constructor(props : {}) {
     super(props);
     this.state = {
