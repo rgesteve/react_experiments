@@ -4,6 +4,7 @@ import './App.css';
 
 import HelloWorld from './components/HelloWorld';
 import Smiley from './components/Smiley';
+import PropDrillingBad from './components/PropDrillingBad';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
           react
         </a>
         <Smiley height={300} width={300} />
+	<PropDrillingBad />
 	</code>
 	experiments.
 	</p>
