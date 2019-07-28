@@ -1,5 +1,7 @@
+// https://jsbin.com/beveno/edit?html,output
+
 import React from 'react';
-//import Math;
+import { findDOMNode } from "react-dom";
 
 interface SmileyProps {
   height : number;
@@ -29,7 +31,7 @@ class Smiley extends React.Component<SmileyProps, SmileyState> {
     let cx = this.props.width / 2;
     let cy = this.props.height / 2;
     return (
-      <svg ref="svg" {...this.props}>
+      <svg ref="svg" {...this.props} onMouseMove={this.handleMouseMove.bind(this)}>
         {this.renderHead(cx, cy, radius, strokeWidth)}
         {this.renderEye(cx - radius/3, cy - radius/5, radius/4, strokeWidth)}
 	{this.renderEye(cx + radius/3, cy - radius/5, radius/4, strokeWidth)}
@@ -59,6 +61,18 @@ class Smiley extends React.Component<SmileyProps, SmileyState> {
     let bottom = top + width * 2/5;
     let path = `M${left} ${top} C ${left + 0.25*width} ${bottom}, ${left + 0.75*width} ${bottom}, ${left+width} ${top}`;
     return (<path d={path} stroke="black" strokeWidth={strokeWidth} fill="transparent" />);
+  }
+
+  handleMouseMove(event: React.MouseEvent<SVGSVGElement>) {
+    let svg = findDOMNode(this.refs.svg);
+    if (svg !== null) {
+      let rect = (svg as SVGSVGElement).getBoundingClientRect();
+      this.setState({
+        x : event.clientX - rect.left,
+        y : event.clientY - rect.top
+      });
+    }
+    console.log(`The mouse is moving...`);
   }
 
 }
