@@ -6,6 +6,7 @@ import HelloWorld from './components/HelloWorld';
 import Smiley from './components/Smiley';
 import PropDrillingBad from './components/PropDrillingBad';
 import {TopComponent} from './components/ComponentHierarchy';
+import {TODOWithContext} from './components/TODOWithContext';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         </a>
         <Smiley height={300} width={300} />
 	<PropDrillingBad />
+	<TODOWithContext compiler="test1" framework="test2" store="test3" />
 	</code>
 	experiments.
 	</p>
