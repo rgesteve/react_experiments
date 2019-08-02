@@ -4,32 +4,28 @@ import './App.css';
 
 import HelloWorld from './components/HelloWorld';
 import Smiley from './components/Smiley';
-//import PropDrillingBad from './components/PropDrillingBad';
-//import {TopComponent} from './components/ComponentHierarchy';
-//import {TODOWithContext} from './components/TODOWithContext';
+
+import classnames from 'classnames'
 
 const App: React.FC = () => {
+  let classes = classnames("btn", { "isActive" : true});
+
   return (
     <div className="App">
       <header className="App-header">
         <HelloWorld greeting="Joe" />
         <img src={logo} className="App-logo" alt="logo" />
-	<TopComponent />
         <p>
-	Various <code>
+	Various 
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          react
+          react experiments.
         </a>
         <Smiley height={300} width={300} />
-	<PropDrillingBad />
-	<TODOWithContext compiler="test1" framework="test2" store="test3" />
-	</code>
-	experiments.
 	</p>
       </header>
     </div>
