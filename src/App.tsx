@@ -4,9 +4,9 @@ import './App.css';
 
 import HelloWorld from './components/HelloWorld';
 import Smiley from './components/Smiley';
-import PropDrillingBad from './components/PropDrillingBad';
-import {TopComponent} from './components/ComponentHierarchy';
-import {TODOWithContext} from './components/TODOWithContext';
+//import PropDrillingBad from './components/PropDrillingBad';
+//import {TopComponent} from './components/ComponentHierarchy';
+//import {TODOWithContext} from './components/TODOWithContext';
 
 const App: React.FC = () => {
   return (
