@@ -41,16 +41,30 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
+
+        <div className="row">
       	<BarChart
 	  data={data}
   	  height={400}
   	  width={600}
   	  margin={{ top : 10, bottom : 50, left: 50, right : 10 }}
 	/>
+	</div>
 
-        <HelloWorld greeting="Joe" />
-	<UWTPieChart chartTitle="The chart title" />
-        <img src={logo} className="App-logo" alt="logo" />
+	<div className="container-fluid">
+	  <div className="row">
+          <HelloWorld greeting="Joe" />
+	  </div>
+	  <div className="row">
+  	  <UWTPieChart chartTitle="The chart title" />
+	  </div>
+	  <div className="row">
+          <img src={logo} className="App-logo" alt="logo" />
+	  </div>
+	  <div className="row">
+          <Smiley height={300} width={300} />
+	  </div>
+	</div>
 
         <p>
 	Various 
@@ -62,9 +76,19 @@ const App: React.FC = () => {
         >
           react experiments.
         </a>
-        <Smiley height={300} width={300} />
+
 	</p>
       </header>
+      <div className="m-2">
+        <div className="form-group">
+	  <label>Name:</label>
+	  <input className="form-control" />
+	</div>
+        <div className="form-group">
+	  <label>City:</label>
+	  <input className="form-control" />
+	</div>
+      </div>
     </div>
   );
 }
