@@ -3,7 +3,7 @@ import React from 'react';
 // https://github.com/up209d/UPPortfolio/blob/95253848e0a819cf79902059e2349e8b5d65f4db/src/js/components/commons/SnapSVGImage.js
 // https://raw.githubusercontent.com/deregtd/DICOMSharp/bf966ef19a7da95b73c27778275f34a23302ec27/PSWebsite/ts/Utils/InlineSVG.ts
 
-var DOMParser = typeof window !== 'undefined && (window as any).DOMParser;
+/* var DOMParser = typeof window !== 'undefined && (window as any).DOMParser; */
 
 /*
 function (target: any) {
@@ -19,8 +19,9 @@ function (target: any) {
 };
 */
 
-var _extends = (Object as any).assign || (target : any) => {}
+/* var _extends = (Object as any).assign || (target : any) => { return target } */
 
+/*
 function isParserAvailable(src : any) {
   return typeof DOMParser === 'function' && typeof src === 'string';// && src.trim().substr(0,4) === '<svg';
 }
@@ -45,7 +46,9 @@ interface InlineSVGProps {
   element? : string;
   raw?     : boolean;
 }
+*/
 
+/*
 class InlineSVG extends React.Component<InlineSVGProps, {}> {
 
    private _extractSVGProps(src : any) {
@@ -93,4 +96,5 @@ class InlineSVG extends React.Component<InlineSVGProps, {}> {
    }
 }
 
-export default HelloWorld;
+export default InlineSVG;
+*/

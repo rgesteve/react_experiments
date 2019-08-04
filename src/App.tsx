@@ -55,15 +55,15 @@ const App: React.FC = () => {
 	  <div className="row">
           <HelloWorld greeting="Joe" />
 	  </div>
+
 	  <div className="row">
-  	  <UWTPieChart chartTitle="The chart title" />
-	  </div>
-	  <div className="row">
-          <img src={logo} className="App-logo" alt="logo" />
-	  </div>
-	  <div className="row">
-          <Smiley height={300} width={300} />
-	  </div>
+            <div className="col pagination-center">
+      	      <UWTPieChart chartTitle="The chart title" />
+	    </div>
+	    <div className="col">
+              <Smiley height={300} width={300} />
+	    </div>
+          </div>
 	</div>
 
         <p>
@@ -79,16 +79,6 @@ const App: React.FC = () => {
 
 	</p>
       </header>
-      <div className="m-2">
-        <div className="form-group">
-	  <label>Name:</label>
-	  <input className="form-control" />
-	</div>
-        <div className="form-group">
-	  <label>City:</label>
-	  <input className="form-control" />
-	</div>
-      </div>
     </div>
   );
 }
