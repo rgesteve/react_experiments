@@ -2,8 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//import * as UWT from 'ui-widget-toolkit';
+
 import HelloWorld from './components/HelloWorld';
 import Smiley from './components/Smiley';
+import {UWTPieChart} from './components/UWTReactComponents';
 
 import classnames from 'classnames'
 import { BarChart } from 'react-d3-components' ;
@@ -33,7 +36,7 @@ const App: React.FC = () => {
             { x : 'SomethingC', y : 5 },
       ]
     },
-  ]
+  ];
 
   return (
     <div className="App">
@@ -46,7 +49,9 @@ const App: React.FC = () => {
 	/>
 
         <HelloWorld greeting="Joe" />
+	<UWTPieChart chartTitle="The chart title" />
         <img src={logo} className="App-logo" alt="logo" />
+
         <p>
 	Various 
         <a
